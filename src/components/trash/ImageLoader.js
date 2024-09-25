@@ -1,57 +1,33 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 
 const ImageLoader = ({ src, alt }) => {
-  const [progress, setProgress] = useState(25);
-  const [isHovered, setIsHovered] = useState(false);
-  const animationRef = useRef();
-
-  useEffect(() => {
-    const targetProgress = isHovered ? 95 : 25;
-    const animate = () => {
-      setProgress((prevProgress) => {
-        const newProgress = prevProgress + (targetProgress - prevProgress) * 0.1;
-        if (Math.abs(newProgress - targetProgress) < 5) {
-          return targetProgress;
-        }
-        animationRef.current = requestAnimationFrame(animate);
-        return newProgress;
-      });
-    };
-    animate();
-
-    return () => cancelAnimationFrame(animationRef.current);
-  }, [isHovered]);
+  const [progress, setProgress] = useState(25); 
 
   return (
-    <div
-      className="relative w-[110px] h-[110px]"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <svg className="absolute w-full h-full" viewBox="0 0 100 100">
-        <circle
-          className="text-black"
-          stroke="currentColor"
-          strokeWidth="8"
-          fill="none"
-          cx="50"
-          cy="50"
-          r="46"
+    <div className="relative w-[110px] h-[110px]" onMouseEnter={() => setProgress(95)} onMouseLeave={() => setProgress(25)} aria-label="Image with circular loader">
+      <svg className="w-full h-full absolute" viewBox="0 0 100 100">
+        <circle 
+          className="text-black" 
+          strokeWidth="8" 
+          stroke="currentColor" 
+          fill="transparent" 
+          r="46" cx="50" cy="50"
         />
-        <circle
-          className={`transition-colors duration-300 ${isHovered ? 'text-green-700' : 'text-green-500'}`}
-          stroke="currentColor"
-          strokeWidth="8"
-          fill="none"
-          cx="50"
-          cy="50"
-          r="46"
+        <circle 
+          className={`text-green-500 transition-all duration-100`}
+          strokeWidth="8" 
+          stroke="currentColor" 
+          fill="transparent" 
+          r="46" cx="50" cy="50" 
           strokeDasharray={`${progress} 100`}
           strokeDashoffset="25"
-          strokeLinecap="round"
+          strokeLinecap="square"
         />
       </svg>
-      <img src={src} alt={alt} className="absolute inset-0 w-24 h-24 object-cover" />
+
+      <div className="absolute inset-0 flex items-center justify-center">
+        <img src={src} alt={alt} className="w-24 h-24 rounded-full object-cover"/>
+      </div>
     </div>
   );
 };

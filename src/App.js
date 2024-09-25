@@ -30,10 +30,12 @@ function App() {
         return `url(${tournament})`;
       case "teams":
         return `url(${team})`;
-        case "register":
+      case "register":
           return `url(${register})`; 
-        case "quiz":
+      case "quiz":
         return `url(${win})`; 
+      case "":
+        return `url(${background})`; 
       default:
         return `url(${background})`;
     }

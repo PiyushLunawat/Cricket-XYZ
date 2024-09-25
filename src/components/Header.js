@@ -1,5 +1,5 @@
 import React from 'react';
-import icon from '../assets/img/blackBall.svg';
+import icon from '../assets/img/blackBall.jpg';
 
 const Header = ({ onContactClick }) => {
   return (

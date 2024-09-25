@@ -1,6 +1,6 @@
 import React from 'react';
-import Drawer from './Drawer'; // Import the Drawer component
-import icon from '../assets/img/blackBall.svg';
+import Drawer from './trash/Drawer';
+import icon from '../assets/img/blackBall.jpg';
 import instagram from '../assets/img/instagram.svg';
 import facebook from '../assets/img/facebook.svg';
 import twitter from '../assets/img/twitter.svg';
