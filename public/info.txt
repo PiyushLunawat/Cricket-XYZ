@@ -1,0 +1,48 @@
+Cricket-Themed Web Development Challenge -
+Are you ready to showcase your web development skills and creativity? Join our exciting competition and build a stunning website 
+for XYZ Organization, a sports organization dedicated to conducting cricket tournaments in various formats. Your challenge is to 
+create an interactive, cricket-themed website using React.js, Tailwind, CSS HTML etc.
+
+Challenge Brief -
+Participants are required to develop a dynamic and engaging website that aligns with the cricket theme and meets the following 
+requirements:
+
+> Interactivity: The website should be visually appealing and interactive, incorporating animations and smooth transitions.
+> Multi-Stage Registration Form: Create a page for users to register using a multi-stage form. The form data should be sent to a 
+demo POST method.
+> Themed Elements: The website should feature cricket-themed elements throughout, reflecting the spirit of the sport.
+> Hosting: Host the website on a free server platform like GitHub Pages, Netlify, or Vercel (choose the best fit). Ensure the 
+site is publicly accessible.
+> Code Submission: Submit the entire codebase, ensuring originality and avoiding plagiarism.
+
+Submission Guidelines -
+> Upload the hosted website link and the complete codebase as a ZIP file.
+> Ensure that the code is original; plagiarism will result in disqualification.
+> Include a readme file detailing the setup and deployment instructions.
+> All submissions should be made at https://forms.gle/ZoVAyEATEFGDujGY6
+
+Judging Criteria -
+> Creativity and Design
+> User Experience and Interactivity
+> Technical Implementation and Code Quality
+> Alignment with the Cricket Theme
+
+Deadline for Submission - 25 Sept 2024
+
+
+                                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+It should be about a cricket organization which contains info 
+about it *
+the match details, 
+history of organization * 
+leagues happened previously, 
+photo gallery*
+registration processes.
+
+We expect a dynamic webpage which does more than just event organising. You have the creativity to add any feature which is
+relevant to a sports organization. However, it should atleast have the requirements mentioned in the description.
+
+you can use any library as long as the main build is on React.js
+
