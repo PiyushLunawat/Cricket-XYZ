@@ -15,12 +15,12 @@ const Header = ({ onContactClick }) => {
         <nav className=''>
           <ul className="flex space-x-6 items-center">
             <li>
-              <a href="/" className="hover:text-green-500 text-xs sm:text-normal">Home</a>
+              <a href="/" className="hover:text-green-500 text-xs sm:text-base">Home</a>
             </li>
             <li>
-              <a href="/about" className="hover:text-green-500 text-xs sm:text-normal">About</a>
+              <a href="/about" className="hover:text-green-500 text-xs sm:text-base">About</a>
             </li>
-            <li className="hover:text-green-500 text-xs sm:text-normal" onClick={(e) => { e.preventDefault(); onContactClick(); }}>
+            <li className="hover:text-green-500 text-xs sm:text-base" onClick={(e) => { e.preventDefault(); onContactClick(); }}>
                 Contact
             </li>
           </ul>
