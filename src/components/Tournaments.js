@@ -95,7 +95,7 @@ const Tournaments = ({ setActiveComponent }) => {
       <Tabs defaultActiveTab={0}>
         <TabsContent title="Current Tournaments">
           {currentTournaments.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-auto" style={{ maxHeight: 'calc(100vh - 250px)' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-auto custom-scrollbar" style={{ maxHeight: 'calc(100vh - 250px)' }}>
               {currentTournaments.map((tournament) => (
                 <div
                   key={tournament.id}
@@ -117,7 +117,7 @@ const Tournaments = ({ setActiveComponent }) => {
 
         <TabsContent title="Upcoming Tournaments" >
           {upcomingTournaments.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-auto" style={{ maxHeight: 'calc(100vh - 250px)' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-auto custom-scrollbar" style={{ maxHeight: 'calc(100vh - 250px)' }}>
               {upcomingTournaments.map((tournament) => (
                 <div
                   key={tournament.id}
@@ -138,7 +138,7 @@ const Tournaments = ({ setActiveComponent }) => {
 
         <TabsContent title="Previous Tournaments">
           {previousTournaments.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-auto justify-center" style={{ maxHeight: 'calc(100vh - 250px)' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-auto custom-scrollbar justify-center" style={{ maxHeight: 'calc(100vh - 250px)' }}>
               {previousTournaments.map((tournament) => (
                 <div
                   key={tournament.id}

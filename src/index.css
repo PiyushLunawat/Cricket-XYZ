@@ -80,3 +80,21 @@ code {
   transform: rotate(45deg);
 }
 
+.custom-scrollbar {
+  overflow: scroll;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #22c55e #09090b; /* Scrollbar color for Firefox */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px; 
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #22c55e; 
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #09090b; 
+}

@@ -20,7 +20,7 @@ const About = () => {
   };
 
   return (
-    <div className="mx-4 sm:mx-16 my-8 bg-black bg-opacity-50 text-white py-12 px-8  overflow-auto" style={{ height: 'calc(100vh - 125px)' }}>
+    <div className="mx-4 sm:mx-16 my-8 bg-black bg-opacity-50 text-white py-12 px-8  overflow-auto custom-scrollbar" style={{ height: 'calc(100vh - 125px)' }}>
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8">
           About XYZ Cricket Organization

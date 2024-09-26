@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Quiz from "../components/Quiz";
 import Tournament from "../components/Tournaments";
 import Register from "../components/Register";
@@ -92,6 +92,15 @@ const Dashboard = ({ setActiveComponent }) => {
     setActiveComponent(component); 
   };
 
+  const scrollContainerRef = useRef(null);
+
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+    if (scrollContainer) {
+      scrollContainer.scrollLeft = scrollContainer.scrollWidth / 2 - scrollContainer.clientWidth / 2;
+    }
+  }, []);
+
   return (
     <>
       <div className="p-4 text-white">
@@ -107,7 +116,7 @@ const Dashboard = ({ setActiveComponent }) => {
 
         { activeComponent === "" &&
         <div className="fixed bottom-4 sm:bottom-4 lg:left-1/2 transform lg:-translate-x-[40%] z-10 justify-center ml-8 sm:ml-[55px]">
-         <div className="flex gap-8 w-[100vw] pl-12 overflow-x-auto">
+         <div ref={scrollContainerRef}  className="flex gap-8 w-[100vw] pl-8 overflow-x-auto custom-scrollbar">
           <div className="relative w-fit group" onClick={() => handleSetActiveComponent("stats")}>
             <ImageLoader src={obj} alt="ObJ"/> 
             <button className={`relative w-[165px] px-2 py-2 -left-[25%] -top-[50%] group-hover:-top-[75%] transition-all duration-300 ${activeComponent === "stats" ? "text-black bg-green-500 font-bold" : "text-green-500 bg-black"}`}>

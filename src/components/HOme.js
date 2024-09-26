@@ -71,7 +71,7 @@ const Home = () => {
   return (
     <div className="p-4 text-white items-center ">
       {matchData ? (
-        <div className='w-full flex gap-4 overflow-x-auto mx-4'>
+        <div className='w-full flex gap-4 overflow-x-auto custom-scrollbar mx-4'>
         {matchData.map((match, index) => (
         <div className="mb-8 bg-black min-w-[350px] px-4 py-2 shadow-lg">
           <h2 className="text-xl font-bold mb-2 text-green-500">{match.type} Match</h2>
@@ -86,7 +86,7 @@ const Home = () => {
         </div>
       )}
 
-      <div className="w-full overflow-x-auto">
+      <div className="w-full overflow-x-auto custom-scrollbar">
       <div className="flex p-4 space-x-4">
         {newsItems.map((item, index) => (
           <div key={index} className="flex-shrink-0 bg-black bg-opacity-50 p-2 w-80 mr-4">

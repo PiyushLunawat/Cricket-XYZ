@@ -21,16 +21,16 @@ const Teams = ({ teamsData, setActiveComponent }) => {
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4 text-white p-4">
-        <div className="w-full sm:w-[400px] p-4 sm:border-r sm:border-gray-700 ">
+        <div className="w-full sm:w-[400px] sm:pr-2">
           <input
             type="text"
             placeholder="Search team by name..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full mb-4 px-4 py-2 bg-black text-white focus:outline-none"
+            className="w-full mb-4 px-4 p-2 bg-black text-white focus:outline-none"
           />
 
-          <ul className="space-y-2 overflow-auto" style={{ height: window.innerWidth >= 640 ? 'calc(100vh - 250px)' : '150px',}}>
+          <ul className="space-y-2 overflow-auto custom-scrollbar" style={{ height: window.innerWidth >= 640 ? 'calc(100vh - 250px)' : '150px',}}>
             {filteredTeams.map((team) => (
               <li
                 key={team.id}
@@ -46,7 +46,7 @@ const Teams = ({ teamsData, setActiveComponent }) => {
           </ul>
         </div>
 
-        <div className="w-full p-4 bg-black bg-opacity-50 overflow-auto" style={{ height: window.innerWidth >= 640 ? 'calc(100vh - 200px)' : '400px',}}>
+        <div className="w-full p-4 bg-black bg-opacity-50  sm:border-l sm:border-gray-700 overflow-auto custom-scrollbar" style={{ height: window.innerWidth >= 640 ? 'calc(100vh - 200px)' : '400px',}}>
           {selectedTeam ? (
             <>
             <div className='flex justify-between items-center flex-wrap mb-4 gap-2'>
