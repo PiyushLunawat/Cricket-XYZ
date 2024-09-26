@@ -67,7 +67,6 @@ const newsItems = [
   },
 ];
 
-
 const Home = () => {
   return (
     <div className="p-4 text-white items-center ">

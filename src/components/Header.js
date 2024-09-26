@@ -8,19 +8,19 @@ const Header = ({ onContactClick }) => {
         <div className="text-2xl font-bold">
           <a href="/" className="flex gap-1 justify-between text-lg md:text-xl items-center font-normal">
             <img src={icon} alt='xYz' className='w-6 h-6'/>
-            cricket.<i>XYZ</i>
+            cricket<i className="hidden sm:block">.XYZ</i>
           </a>
         </div>
 
         <nav className=''>
           <ul className="flex space-x-6">
             <li>
-              <a href="/" className="hover:text-green-500 ">Home</a>
+              <a href="/" className="hover:text-green-500 text-xs sm:text-normal">Home</a>
             </li>
             <li>
-              <a href="/about" className="hover:text-green-500">About</a>
+              <a href="/about" className="hover:text-green-500 text-xs sm:text-normal">About</a>
             </li>
-            <li className="hover:text-green-500" onClick={(e) => { e.preventDefault(); onContactClick(); }}>
+            <li className="hover:text-green-500 text-xs sm:text-normal" onClick={(e) => { e.preventDefault(); onContactClick(); }}>
                 Contact
             </li>
           </ul>
