@@ -13,7 +13,7 @@ const Header = ({ onContactClick }) => {
         </div>
 
         <nav className=''>
-          <ul className="flex space-x-6">
+          <ul className="flex space-x-6 items-center">
             <li>
               <a href="/" className="hover:text-green-500 text-xs sm:text-normal">Home</a>
             </li>
